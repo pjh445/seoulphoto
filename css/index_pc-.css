@@ -1,0 +1,151 @@
+@charset "utf-8";
+
+/*** 상단 ***/
+header {max-width:990px; margin:auto; position:relative;}
+header p {font:35px "Black Han Sans",sans-serif; background:transparent; color:black; position:absolute; top:0; left:0; width:100%; padding-top:30px; transform:translateX(-70px); text-align:center; letter-spacing:1px; z-index:-1; }
+header p b {font:35px "Black Han Sans",sans-serif; color:#ff6600;}
+
+header div {display:flex; justify-content:space-between; align-items:center; padding:30px 10px 20px 0px;}
+header button.menu {display:none;}
+h2#logo {flex-basis:auto; flex-grow:0; max-width:270px; text-align:center; }
+h2#logo a {display:block; width:100%;}
+h2#logo img {width:100%;}
+header h3 a {text-decoration:none;}
+header h3 a.telNum {display:block; font:400 40px "Roboto",sans-serif; color:#00002d;}
+header h3 a.material-icons.phone {display:none;}	
+
+/*** 메뉴 ***/
+nav#menuAll{background:white; display:block;}
+
+/*서브메뉴 내려올때 바탕색*/
+#subMenuBg {position:absolute; width:100%; height:200px; top:40px; background:white; box-shadow:0 5px 5px rgba(0,0,0, 0.6); display:none;}
+
+nav#menuAll> hr {width:100%; height:2px; background:#ddd; position:absolute; top:42px; border:none; display:block;}
+
+nav#menuAll> ul {position:relative; max-width:1000px; margin:auto; display:flex; justify-content:space-between; padding:0;  height:initial; background:transparent; box-shadow:none; }
+nav#menuAll li {padding-left:0px; }
+nav#menuAll li:not(:first-child) {border-top:none;}
+
+/**메인메뉴**/
+a.mainMenu {position:relative; padding:10px;}
+a.mainMenu .more {display:none;}
+a.mainMenu hr {display:block; background:#ff6600; position:absolute; bottom:0; left:0; border:none; transition:0.5s; width:0; height:5px;}
+
+a.mainMenu:hover hr { width:100%;}
+a.mainMenu.orageBar hr {width:100%;}
+
+/**하위메뉴**/
+nav.subMenu {padding:15px 0 20px 10px;  position:absolute; background:transparent;}
+nav.subMenu a  {padding:5px 0px; }
+nav.subMenu a:hover	{color:#ff6600;}
+
+/****************************/
+/***슬라이드영역***/
+#slideBg {background:#060606 url("../index_img/index-slide-bg.jpg") no-repeat center/contain; }
+#slideArea {width:100vw; max-width:1200px; height:initial;  margin:auto; overflow:hidden;  position:relative; z-index:1; touch-action: none;}
+#slideArea h2 {display:none;}
+
+/* Mobile용 슬라이드 이미지 감춤 */
+#slideMobile {display:none;}
+
+
+#slidePC {width:600%; display:flex; position:relative; left:-100%;}
+#slidePC a {display:block; width:100%; height:initial; background:transparent;}
+#slidePC img {width:100%;}
+
+
+/*동그라미 원형 위치표시*/
+#circle {}
+#circle div {width:11px; height:11px; border-radius:6px;}
+#circle div.active {width:40px;}
+
+
+/* 양쪽 화살표 (PC에서는 보이게 됨) */
+#arrows {position:absolute; width:100%; max-width:1200px;  top:130px; display:flex; justify-content:space-between;}
+#arrows button {background:transparent; border:none; font-size:3rem; color:#ddd; padding:10px; text-shadow:0 0 8px #00021d; cursor:pointer;}
+
+
+/*********************************************/
+/*** 모집중인 국비지원 및 일반 교육과정 ***/
+#course {background:#eee; padding:60px 0;}
+#course> section {max-width:1100px; margin:auto; }
+
+hr.topBar  {max-width:100px; height:5px; background:black;}
+h2.bar_h2 {color:#555; font-size:25px; padding-top:3px;}
+
+#course>section> div {display:flex; justify-content:space-between; padding-top:20px;}
+.courseBox  {flex-basis:32%; font-family:"Nanum Gothic", sans-serif;  background:white; padding-bottom:10px;}
+.courseBox div {position:relative;}
+.courseBox h3 {position:absolute; width:100%; padding:25px; background:rgba(0,0,0, 0.7); color:White; font-weight:400; font-size:19px; letter-spacing:1px;}
+.courseBox div:last-child {padding:10px; line-height:170%;}
+.courseBox h4 {font-size:15px; letter-spacing:0px; padding-top:20px;}
+.courseBox p {font-size:13px;}
+.courseBox span {float:right;}
+
+
+/*** 서울사진영상IT학원의 5대 장점과 오시는 길 ***/
+#advantages_map> div {display:flex; justify-content:space-between; padding-top:20px;}
+#advantages_map section {flex-basis:49%; overflow:hidden;}
+
+/*5대장점 애니메이션*/
+#advantages_map li { left:-100%; position:relative; transition:1s;}
+#advantages_map li.ani {left:0;}
+
+/*카카오상담하기*/
+#advantages_map h3 {right:20px; left:auto; top:20%;}
+
+/*구글지도*/
+#advantages_map iframe {flex-basis:49%; height:auto; border:none; margin-top:0;}
+
+
+/*** 하단 ***/
+#footerTopLine { }
+#footerTopLine+ div { }
+footer {padding:30px 0; flex-direction:row; align-items:center;}
+
+/*하단 로고*/
+footer h2 {order:1; flex:1; padding:0; padding-right:20px; }
+
+/*주소... */
+footer p {margin:0; order:2; flex:2; line-height:200%; padding-right:20px;}
+
+footer div  {padding-top:0;order:3; flex:1.6; line-height:180%; }
+
+/*전화기 아이콘*/
+a.footerPhone {top:-10px; left:auto; right:20px; font-size:70px;}
+
+/*전화번호*/
+footer div  b {}
+footer div  b:first-of-type {}
+footer div strong {}
+footer div a {}
+
+@keyframes zigzag {
+		0%	{transform:translateX(-3px);}
+		3%  {transform:translateX(3px);}
+		6%	{transform:translateX(-3px);}
+		9%  {transform:translateX(3px);}
+		12%	{transform:translateX(-3px);}
+		15% {transform:translateX(3px);}
+		18%	{transform:translateX(-3px);}
+		21% {transform:translateX(3px);}
+		24%	{transform:translateX(-3px);}
+		100%{transform:translateX(0px);}
+}
+
+
+
+/******미디어규칙 (브라우저 넓이 ~900픽셀까지 적용) *******/
+@media(max-width:900px){
+	header p {font-size:30px;transform:translateX(-50px);}
+	header p b {font-size:30px; }
+	header h3 a.telNum {font-size:30px; }	
+
+	/*** 모집중인 국비지원 및 일반 교육과정 ***/	
+	#course>section> div {display:flex; flex-wrap:wrap; justify-content:space-between;}
+	.courseBox div {height:initial;}
+	.courseBox {flex-basis:48vw;}	
+	
+}	
+	
+	

@@ -1,0 +1,58 @@
+@charset "utf-8";
+
+/*** 하단 ***/
+#footerTopLine {width:100%; height:3px; background:#eee; margin-top:30px;}
+#footerTopLine+ div { }
+footer {max-width:1100px; margin:auto; padding:30px 15px;  display: flex; flex-direction:column;}
+
+/*하단 로고*/
+footer h2 {order:2; padding:50px 0 20px 30px;}
+footer h2 a img {margin:auto;}
+
+/*주소... */
+footer p {order:3; font-size:12px; color:black; line-height:180%;}
+
+footer div  {order:1; position:relative; font-size:12px;  line-height:200%; color:black;  padding-top:110px;}
+
+/*전화기 아이콘*/
+a.footerPhone {position:absolute; top:20px; left:40%; right:40%; font-size:80px; text-decoration:none;   color:#afafaf; display:block; animation:zigzag 3s infinite; }
+
+/*전화번호 전화기*/
+footer div  b {font-size:13px; display:inline-block; width:60px;}
+footer div  b:first-of-type {padding-bottom:10px;}
+footer div strong {font-size:40px; font-weight:100; display:inline-block; transform:translateY(3px);}
+footer div a {text-decoration:none;  color:black; }
+
+
+/******미디어규칙 (브라우저 넓이 600픽셀부터 적용) *******/
+@media (min-width:600px) {
+
+	/***하단***/
+	footer div  {padding-top:0px;}	
+	/*하단 전화기*/	
+	a.footerPhone {top:0px; left:auto; right:20%; }	
+	/*하단 로고*/
+	footer h2 {padding:60px 0; }
+	footer h2 a img {margin-left:0; margin-right:auto;}
+	/*주소... */
+	footer p {margin:-130px 0 0 35%;}
+	
+}	
+
+@media (min-width:700px){
+	
+	/*** 하단 ***/
+	footer {padding:30px 0; flex-direction:row; align-items:center;}
+
+	/*하단 로고*/
+	footer h2 {order:1; flex:1; padding:0; padding-right:20px; }
+
+	/*주소... */
+	footer p {margin:0; order:2; flex:2; line-height:200%; padding-right:20px;}
+
+	footer div  {padding-top:0;order:3; flex:1.6; line-height:180%; }
+	/*전화기 아이콘*/
+	a.footerPhone {top:-10px; left:auto; right:20px; font-size:70px;}	
+	
+}
+

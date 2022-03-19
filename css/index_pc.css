@@ -1,0 +1,68 @@
+@charset "utf-8";
+
+/****************************/
+/***슬라이드영역***/
+#slideBg {background:#060606 url("../index_img/index-slide-bg.jpg") no-repeat center/contain; }
+#slideArea {width:100vw; max-width:1200px; height:initial;  margin:auto; overflow:hidden;  position:relative; z-index:1; touch-action: none;}
+#slideArea h2 {display:none;}
+
+/* Mobile용 슬라이드 이미지 감춤 */
+#slideMobile {display:none;}
+
+
+#slidePC {width:600%; display:flex; position:relative; left:-100%;}
+#slidePC a {display:block; width:100%; height:initial; background:transparent;}
+#slidePC img {width:100%;}
+
+
+/*동그라미 원형 위치표시*/
+#circle {}
+#circle div {width:11px; height:11px; border-radius:6px;}
+#circle div.active {width:40px;}
+
+
+/* 양쪽 화살표 (PC에서는 보이게 됨) */
+#arrows {position:absolute; width:100%; max-width:1200px;  top:130px; display:flex; justify-content:space-between;}
+#arrows button {background:transparent; border:none; font-size:3rem; color:#ddd; padding:10px; text-shadow:0 0 8px #00021d; cursor:pointer;}
+
+
+/*********************************************/
+/*** 모집중인 국비지원 및 일반 교육과정 ***/
+#course {background:#eee; padding:60px 0;}
+#course> section {max-width:1100px; margin:auto; }
+
+hr.topBar  {max-width:100px; height:5px; background:black;}
+h2.bar_h2 {color:#555; font-size:25px; padding-top:3px;}
+
+#course>section> div {display:flex; justify-content:space-between; padding-top:20px;}
+.courseBox  {flex-basis:32%; font-family:"Nanum Gothic", sans-serif;  background:white; padding-bottom:10px;}
+.courseBox div {position:relative;}
+.courseBox h3 {position:absolute; width:100%; padding:25px; background:rgba(0,0,0, 0.7); color:White; font-weight:400; font-size:19px; letter-spacing:1px;}
+.courseBox div:last-child {padding:10px; line-height:170%;}
+.courseBox h4 {font-size:15px; letter-spacing:0px; padding-top:20px;}
+.courseBox p {font-size:13px;}
+.courseBox span {float:right;}
+
+
+/*** 서울사진영상IT학원의 5대 장점과 오시는 길 ***/
+#advantages_map> div {display:flex; justify-content:space-between; padding-top:20px;}
+#advantages_map section {flex-basis:49%; overflow:hidden;}
+
+/*5대장점 애니메이션*/
+#advantages_map li { left:-100%; position:relative; transition:1s;}
+#advantages_map li.ani {left:0;}
+
+/*카카오상담하기*/
+#advantages_map h3 {right:20px; left:auto; top:20%;}
+
+/*구글지도*/
+#advantages_map iframe {flex-basis:49%; height:auto; border:none; margin-top:0;}
+
+
+/******미디어규칙 (브라우저 넓이 700픽셀부터~ 적용) *******/
+@media(min-width:700px){
+	
+}
+	
+	
+	

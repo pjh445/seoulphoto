@@ -1,0 +1,103 @@
+@charset "utf-8";
+
+* {margin:0; padding:0; box-sizing:border-box;}
+html,body {font-family:"Noto Sans KR", sans-serif; }
+img {display:block; max-width:100%; margin:auto;}
+
+/*** 상단 ***/
+header {margin:auto; position:relative;}
+header p {font:16px "Noto Sans KR", sans-serif; text-align:center; background:#fe6700; letter-spacing:1px; color:white;}
+header p b {font-size:15px; font-weight:400; color:yellow;}
+
+header div {display:flex; justify-content:space-between; align-items:center; padding:30px 10px 20px 10px;}
+header button.menu {background:transparent; border:none; font-size:42px; color:#666;}
+header h2 {flex:1; text-align:center;}
+header h2 img {display:block; max-width:100px; margin:auto;}
+header h3 a {text-decoration:none;}
+header h3 a.telNum {display:none;}
+header h3 a.material-icons.phone {display:inline-block; color:#d48e56; font-size:25px; padding:4px; border:2px solid #ffaf79; border-radius:50%; animation: zigzag 3.5s infinite;}
+
+@keyframes zigzag {
+		0%	{transform:translateX(-3px);}
+		3%  {transform:translateX(3px);}
+		6%	{transform:translateX(-3px);}
+		9%  {transform:translateX(3px);}
+		12%	{transform:translateX(-3px);}
+		15% {transform:translateX(3px);}
+		18%	{transform:translateX(-3px);}
+		21% {transform:translateX(3px);}
+		24%	{transform:translateX(-3px);}
+		100%{transform:translateX(0px);}
+}
+
+/*** 메뉴 ***/
+nav#menuAll {border-top:2px solid #d3d3d3; position:relative; z-index:2;}
+nav#menuAll> hr { display:none;}
+
+
+nav#menuAll> ul{position:absolute; width:100%; height:80vh; left:0; top:0; list-style:none;  background:#eee; box-shadow:0 2px 5px rgba(0,0,0, 0.4); display:none;}
+nav#menuAll li {/*padding-left:20px;*/}
+nav#menuAll li:not(:first-child) {border-top:1px solid #c6c6c6;}
+nav#menuAll a {text-decoration:none; }
+
+/**메인메뉴**/
+a.mainMenu {color:black;display:block;padding:10px 0 10px 30px; transition:0.3s; text-decoration:none;}
+a.mainMenu .more {float:right; color:#888; background:transparent; border:none; padding:3px 15px;}
+a.mainMenu hr {display:none;}
+
+/**하위메뉴**/
+nav.subMenu {padding:10px 10px 20px 0px; display:none; background:#d3d3d3;}
+nav.subMenu a  {display:block; padding:6px 0px 6px 50px; font-size:14px; color:#222;}
+
+#h3_bar {width:124px; height:3px; background:black;}
+
+
+
+
+
+
+@media (min-width:700px){
+	/*** 상단 ***/
+	header {max-width:990px; margin:auto; position:relative;}
+	header p {font:35px "Black Han Sans",sans-serif; background:transparent; color:black; position:absolute; top:0; left:0; width:100%; padding-top:30px; transform:translateX(-70px); text-align:center; letter-spacing:1px; z-index:-1; }
+	header p b {font:35px "Black Han Sans",sans-serif; color:#ff6600;}
+
+	header div {display:flex; justify-content:space-between; align-items:center; padding:30px 10px 20px 0px;}
+	header button.menu {display:none;}
+	h2#logo {flex-basis:auto; flex-grow:0; max-width:270px; text-align:center; }
+	h2#logo a {display:block; width:100%;}
+	h2#logo img {width:100%;}
+	header h3 a {text-decoration:none;}
+	header h3 a.telNum {display:block; font:400 40px "Roboto",sans-serif; color:#00002d;}
+	header h3 a.material-icons.phone {display:none;}	
+
+	/*** 메뉴 ***/
+	nav#menuAll{background:white; display:block;}
+
+	/*서브메뉴 내려올때 바탕색*/
+	#subMenuBg {position:absolute; width:100%; height:200px; top:40px; background:white; box-shadow:0 5px 5px rgba(0,0,0, 0.6); display:none;}
+
+	nav#menuAll> hr {width:100%; height:2px; background:#ddd; position:absolute; top:42px; border:none; display:block;}
+
+	nav#menuAll> ul {position:relative; max-width:1000px; margin:auto; display:flex; justify-content:space-between; padding:0;  height:initial; background:transparent; box-shadow:none; }
+	nav#menuAll li {padding-left:0px; }
+	nav#menuAll li:not(:first-child) {border-top:none;}
+
+	/**메인메뉴**/
+	a.mainMenu {position:relative; padding:10px;}
+	a.mainMenu .more {display:none;}
+	a.mainMenu hr {display:block; background:#ff6600; position:absolute; bottom:0; left:0; border:none; transition:0.5s; width:0; height:5px;}
+
+	a.mainMenu:hover hr { width:100%;}
+	a.mainMenu.orageBar hr {width:100%;}
+
+	/**하위메뉴**/
+	nav.subMenu {padding:15px 0 20px 10px;  position:absolute; background:transparent;}
+	nav.subMenu a  {padding:5px 0px; }
+	nav.subMenu a:hover	{color:#ff6600;}
+	
+}
+
+
+
+
